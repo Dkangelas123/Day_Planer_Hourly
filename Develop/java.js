@@ -1,16 +1,16 @@
-var d = new Date();
-var today = new Date();
-var time = today.getHours
+$(function () {});
+var today = moment().format("dddd, MMMM, Do");
+document.getElementById("currentDay").innerHTML = today;
 
 
-document.getElementById("currentDay").innerHTML = d;
-
+//localsstorage
 $(".saveBtn").click(function (event){
     event.preventDefault();
     var valuew =$(this).siblings(".plan").val();
     console.log(valuew)
     localStorage.setItem("9", valuew);
     localStorage.setItem("10", valuew);
+    localStorage.setItem("11", valuew);
 })
 $("#9 .plan").val(localStorage.getItem("9"));
 $("#10 .plan").val(localStorage.getItem("10"));
@@ -25,6 +25,7 @@ $( document ).ready(function() {
         $( this ).attr('id');
         console.log(Hourind)
 
+      // if (Hourind == time)
       });
 });
 
