@@ -14,18 +14,23 @@ document.getElementById("currentDay").innerHTML = today;
 $(".saveBtn").click(function (event){
     event.preventDefault();
     var valuew =$(this).siblings(".plan").val();
+    var valuex =$(this).parent().attr("id");
     console.log(valuew)
-    localStorage.setItem("9", valuew);
-    localStorage.setItem("10", valuew);
-    localStorage.setItem("11", valuew);
+    localStorage.setItem(valuex, valuew);
+ 
 })
-$("#9 .plan").val(localStorage.getItem("9"));
+$("#09 .plan").val(localStorage.getItem("09"));
 $("#10 .plan").val(localStorage.getItem("10"));
 $("#11 .plan").val(localStorage.getItem("11"));
 $("#12 .plan").val(localStorage.getItem("12"));
-$("#1 .plan").val(localStorage.getItem("1"));
-$("#2 .plan").val(localStorage.getItem("2"));
+$("#13 .plan").val(localStorage.getItem("13"));
+$("#14 .plan").val(localStorage.getItem("14"));
+$("#15 .plan").val(localStorage.getItem("15"));
+$("#16 .plan").val(localStorage.getItem("16"));
+$("#17 .plan").val(localStorage.getItem("17"));
 
+
+//color
 $( document ).ready(function() {
     $( ".time-block" ).each(function( index ) {
         var Hourind = 
