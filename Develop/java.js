@@ -1,6 +1,13 @@
+var d = new Date();
+var hourNow = d.getHours();
+console.log(hourNow);
+
+
+//date
 $(function () {});
 var today = moment().format("dddd, MMMM, Do");
 document.getElementById("currentDay").innerHTML = today;
+
 
 
 //localsstorage
@@ -25,7 +32,15 @@ $( document ).ready(function() {
         $( this ).attr('id');
         console.log(Hourind)
 
-      // if (Hourind == time)
+       if (Hourind == hourNow){
+         $(this).addClass("present")
+    
+       }else if (Hourind < hourNow){
+        $(this).addClass("past")
+
+       }if (Hourind > hourNow)
+       $(this).addClass("future")
+         
       });
 });
 
